@@ -60,3 +60,8 @@ async def run_update(request: UpdateRequest):
 def health_check():
     return {"status": "ok", "service": "running"}
 
+# Endpoint de versión
+@app.get("/version")
+def get_version():
+    return {"version": "1.0.0", "name": "ProyectoPrueba"}
+
