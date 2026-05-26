@@ -1,0 +1,9 @@
+---
+ansible_user: "wavenet"
+ansible_password: "Bejerman23$"
+#ansible_password: "Bejerman21!"
+#ansible_password: "Hyper.24"
+ansible_ssh_port: "5985"
+ansible_connection: "winrm"
+ansible_winrm_server_cert_validation: ignore
+password_length: 8

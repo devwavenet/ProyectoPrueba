@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migrator de Actualizaciones - Web UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚙️ Actualizador de Sistemas</h1>
+            <p>Interfaz web para orquestar la instalación de parches de Windows (Migración Ansible).</p>
+        </header>
+        
+        <main>
+            <section class="control-panel">
+                <h2>Seleccionar Parámetros</h2>
+                <div class="form-group">
+                    <label for="category_names">Categorías de Actualización (Opcional):</label>
+                    <textarea id="category_names" rows="4" placeholder="Ej: SecurityUpdates, CriticalUpdates"></textarea>
+                </div>
+                
+                <div class="form-check">
+                    <input type="checkbox" id="force_reboot" checked>
+                    <label for="force_reboot">Forzar reinicio al finalizar</label>
+                </div>
+                
+                <button id="run_update_btn" class="btn primary">Iniciar Proceso de Actualización</button>
+                <p id="status_message" class="status"></p>
+            </section>
+
+            <section class="log-viewer">
+                <h2>Registro de Actividad</h2>
+                <div id="activity_log" class="log-box">Esperando comandos...</div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  updater_service:
+    build: . # Indica que use el Dockerfile en este directorio
+    container_name: ansible_migrator
+    ports:
+      - "2100:80" # Mapea el puerto 80 del host al puerto 80 del contenedor
+    volumes:
+      # Podríamos añadir volúmenes aquí si necesitáramos persistir logs o datos fuera del contenedor
+      # - ./logs:/app/logs
+      pass
+    restart: always

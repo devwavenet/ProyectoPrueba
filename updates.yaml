@@ -1,0 +1,21 @@
+---
+- name: Actualización de Windows
+  hosts: windows
+  gather_facts: no
+  tasks:
+    - name: Instalando todas las actualizaciones y reiniciando las veces que sea necesario
+      ansible.windows.win_updates:
+        category_names: 
+          - SecurityUpdates
+          - CriticalUpdates
+          - UpdateRollups
+          - Application
+          - DefinitionUpdates
+          - FeaturePacks
+          - Updates
+          #- Connectors
+          #- Tools
+          #- Drivers
+        state: installed
+        reboot: true
+        #log_path: C:\ansible_updates.txt 

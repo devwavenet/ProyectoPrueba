@@ -1,0 +1,146 @@
+/* Estilos Modernos y Elegantes */
+:root {
+    --primary-color: #007acc; /* Azul tecnológico */
+    --secondary-color: #1e293b; /* Gris oscuro para fondo */
+    --text-color: #e2e8f0; /* Gris claro para texto */
+    --background-color: #0f172a; /* Azul marino muy oscuro */
+    --card-background: #1e293b;
+    --border-color: #334155;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+header {
+    grid-column: 1 / span 2;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+section {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color);
+}
+
+/* --- Formularios y Controles --- */
+.form-group label, .form-check label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+textarea, input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #111827;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.form-check input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Botón de acción principal */
+.btn.primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn.primary:hover {
+    background-color: #005fa3;
+    transform: translateY(-1px);
+}
+
+.btn.primary:disabled {
+    background-color: #334155;
+    cursor: not-allowed;
+}
+
+/* Estado */
+.status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+.status.success { background-color: #10b981; color: white; }
+.status.error { background-color: #ef4444; color: white; }
+.status.processing { background-color: #f59e0b; color: black; }
+
+/* Visor de Logs */
+.log-box {
+    height: 400px;
+    overflow-y: scroll;
+    padding: 15px;
+    background-color: #0f172a; /* Fondo del log más oscuro */
+    border: 1px solid var(--border-color);
+    font-family: monospace;
+    font-size: 0.9em;
+    white-space: pre-wrap; /* Respeta saltos de línea y espacios */
+    border-radius: 5px;
+}
+/* Scrollbar styling for aesthetics */
+.log-box::-webkit-scrollbar {
+    width: 8px;
+}
+.log-box::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+.log-box::-webkit-scrollbar-track {
+    background: var(--card-background);
+}
